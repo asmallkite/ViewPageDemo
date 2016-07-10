@@ -8,7 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +41,15 @@ public class OneActivity extends AppCompatActivity {
         view1 = LayoutInflater.from(this).inflate(R.layout.view_one, null, false);
         view2 = LayoutInflater.from(this).inflate(R.layout.view_two, null, false);
         view3 = LayoutInflater.from(this).inflate(R.layout.view_three, null, false);
+
+        //测试button是否可以响应
+        Button button = (Button)view1.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(OneActivity.this, "it is ok ", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         RecyclerView recyclerView = (RecyclerView)view1.findViewById(R.id.recycle_view);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
