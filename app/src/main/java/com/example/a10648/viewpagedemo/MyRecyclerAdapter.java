@@ -2,13 +2,17 @@ package com.example.a10648.viewpagedemo;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.ButterKnife;
 
 /**
  * Created by 10648 on 2016/7/10 0010.
@@ -81,5 +85,17 @@ class MyViewHolder extends RecyclerView.ViewHolder{
     public MyViewHolder(View itemView) {
         super(itemView);
         mTv = (TextView)itemView.findViewById(R.id.textView);
+//        ButterKnife.inject(this, itemView); //实现效果同上,只有这一句话是不行的，会报空指针异常
+
+
+        //下面几行真正实现了RecycleView 中的点击事件
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("MyRecycleViewAdapter", "you click the item");
+            }
+        });
+
+
     }
 }
