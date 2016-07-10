@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btn_two:
+                startActivity(new Intent(this, TwoActivity.class));
                 break;
             case R.id.btn_three:
                 break;
