@@ -19,7 +19,6 @@
         <activity android:name=".TwoActivity" />
         <activity android:name=".ThreeActivity" />
         <activity android:name=".FourActivity" />
-        <activity android:name=".ViewOneActivity"></activity>
     </application>
 
 </manifest>

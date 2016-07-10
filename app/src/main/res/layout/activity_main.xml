@@ -31,10 +31,6 @@
         android:layout_height="wrap_content"
         android:text="ViewPager使用示例4" />
 
-    <Button
-        android:id="@+id/btn_five"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试view_one 中的按钮" />
+   
 
 </LinearLayout>

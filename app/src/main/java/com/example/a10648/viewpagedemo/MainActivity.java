@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnThree;
     @InjectView(R.id.btn_four)
     Button btnFour;
-    @InjectView(R.id.btn_five)
-    Button btnFive;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +49,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick(R.id.btn_five)
-    public void onClick() {
-        Toast.makeText(this, "dd", Toast.LENGTH_SHORT).show();
-    }
+
 }
