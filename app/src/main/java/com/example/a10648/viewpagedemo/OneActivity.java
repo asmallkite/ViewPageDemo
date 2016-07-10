@@ -29,6 +29,9 @@ public class OneActivity extends AppCompatActivity {
         setContentView(R.layout.activity_one);
         ButterKnife.inject(this);
 
+        //设置recycleVIew
+
+
         view1 = LayoutInflater.from(this).inflate(R.layout.view_one, null, false);
         view2 = LayoutInflater.from(this).inflate(R.layout.view_two, null, false);
         view3 = LayoutInflater.from(this).inflate(R.layout.view_three, null, false);

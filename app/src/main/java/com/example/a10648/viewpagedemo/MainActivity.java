@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnThree;
     @InjectView(R.id.btn_four)
     Button btnFour;
+    @InjectView(R.id.btn_five)
+    Button btnFive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,5 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, FourActivity.class));
                 break;
         }
+    }
+
+    @OnClick(R.id.btn_five)
+    public void onClick() {
+        Toast.makeText(this, "dd", Toast.LENGTH_SHORT).show();
     }
 }
