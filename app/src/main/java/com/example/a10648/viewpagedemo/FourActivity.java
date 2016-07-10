@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.DisplayMetrics;
@@ -78,8 +79,12 @@ public class FourActivity extends AppCompatActivity {
             Nolist.add(i + "");
         }
 
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(new MyRecyclerAdapter(this, Nolist));
+        List<String> linklist = new ArrayList<>();
+        for (int i = 0; i < 100; i ++){
+            linklist.add("www.baidu.com");
+        }
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new MyRecyclerViewAdapter2(linklist, this));
 
         views.add(view1);
         views.add(view2);
