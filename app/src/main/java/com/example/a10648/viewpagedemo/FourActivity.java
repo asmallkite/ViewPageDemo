@@ -90,10 +90,15 @@ public class FourActivity extends AppCompatActivity {
             Nolist.add(i + "");
         }
 
-        List<String> linklist = new ArrayList<>();
-        for (int i = 0; i < 100; i ++){
-            linklist.add("www.baidu.com");
-        }
+        //下面加入RecycleView中的item链接内容***********
+        List<String> linklist = new ArrayList<>(); //存放内容的list
+
+
+//        for (int i = 0; i < 100; i ++){
+//            linklist.add("www.baidu.com");
+//        }
+
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MyRecyclerViewAdapter2(linklist, this));
 
